@@ -20,7 +20,7 @@ const PORT = 5000;
 // ====================================================================
 // VALIDATION CONFIGURATION
 // ====================================================================
-const CONFIG_SPREADSHEET_ID = '1O-89EpgXUMMmEEye-WQrRz8lmxOT2iOE_YpvypJ-zKQ'; // Master spreadsheet ID
+const CONFIG_SPREADSHEET_ID = ''; // Master spreadsheet ID
 
 // Worksheet names for each sheet type
 const VALIDATION_WORKSHEETS = {
