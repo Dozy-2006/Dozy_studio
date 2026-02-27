@@ -1,0 +1,304 @@
+
+========================================================================
+              DAILY PROGRESS REPORT - DOZY STUDIO S3 PROJECT
+                        (Police Portal System)
+========================================================================
+Student Name  : Prakash
+Project Title : Police Portal - Web-Based Station Management System
+Technologies  : React.js, Express.js, Node.js, Google Sheets API
+========================================================================
+
+
+DATE: 15/01/2025
+------------------------------------------------------------------------
+Work Done:
+- Finalized the project idea and scope for the Police Portal system.
+- Identified key modules: User Management, Task Management, Inventory,
+  Validation, and Reporting.
+- Decided on the tech stack: React.js for frontend, Express.js for
+  backend, Google Sheets as the database layer.
+- Created the initial project folder structure (client and server).
+------------------------------------------------------------------------
+
+
+DATE: 16/01/2025
+------------------------------------------------------------------------
+Work Done:
+- Set up the project using Vite for the React frontend.
+- Initialized the Express.js server with basic configurations.
+- Installed core dependencies: cors, express, googleapis,
+  google-auth-library, uuid, qrcode.
+- Created the basic folder structure for components.
+------------------------------------------------------------------------
+
+
+DATE: 17/01/2025
+------------------------------------------------------------------------
+Work Done:
+- Configured Google Sheets API credentials and service account.
+- Created the credentials.json file for Google API authentication.
+- Set up the sheetsClient.js module for connecting to Google Sheets.
+- Tested basic read/write operations with Google Sheets.
+------------------------------------------------------------------------
+
+
+DATE: 18/01/2025
+------------------------------------------------------------------------
+Work Done:
+- Designed the in-memory database structure (DB object) with arrays
+  for Users, Stations, Tasks, and Groups.
+- Implemented the syncDatabase() function to sync data from Google
+  Sheets into the in-memory store (RAM).
+- Created helper functions: arrayToObjects() for parsing sheet data.
+- Implemented the database readiness middleware (waitForDb).
+------------------------------------------------------------------------
+
+
+DATE: 20/01/2025
+------------------------------------------------------------------------
+Work Done:
+- Built the Background Writer module (processWriteQueue) for writing
+  data from RAM back to Google Sheets asynchronously.
+- Implemented the queueJob() function for queuing write operations
+  (append, update, delete).
+- Added error handling and retry logic for write operations.
+------------------------------------------------------------------------
+
+
+DATE: 21/01/2025
+------------------------------------------------------------------------
+Work Done:
+- Designed and implemented the Login component (Login.jsx).
+- Created the authentication flow with role-based access (Admin,
+  Manager, User).
+- Styled the login page with a clean, professional UI.
+- Implemented session handling with React state management.
+------------------------------------------------------------------------
+
+
+DATE: 22/01/2025
+------------------------------------------------------------------------
+Work Done:
+- Built the main App.jsx with navigation bar and role-based routing.
+- Implemented the Logout functionality.
+- Created conditional rendering for Admin, Manager, and User panels.
+- Added responsive design for the navbar with user info display.
+------------------------------------------------------------------------
+
+
+DATE: 23/01/2025
+------------------------------------------------------------------------
+Work Done:
+- Started building the AdminPanel.jsx component.
+- Implemented the Station Management module in Admin Panel.
+- Created API endpoints for adding, viewing, and managing stations.
+- Built the user management section for creating and managing users
+  with different roles.
+------------------------------------------------------------------------
+
+
+DATE: 24/01/2025
+------------------------------------------------------------------------
+Work Done:
+- Continued work on AdminPanel - added Group Management features.
+- Implemented API endpoints for creating and managing groups.
+- Added functionality to assign users and managers to groups.
+- Built the UI for group creation with member selection.
+------------------------------------------------------------------------
+
+
+DATE: 27/01/2025
+------------------------------------------------------------------------
+Work Done:
+- Implemented Google Sheet permission management features.
+- Created grantSheetPermissions() function to share sheets with users.
+- Created removeSheetPermissions() function to revoke access.
+- Built the extractSheetId() helper for parsing Google Sheet URLs.
+------------------------------------------------------------------------
+
+
+DATE: 28/01/2025
+------------------------------------------------------------------------
+Work Done:
+- Started building the ManagerPanel.jsx component.
+- Implemented Task Creation module for managers.
+- Built the task assignment workflow where managers can assign tasks
+  to users.
+- Created API endpoints for task CRUD operations.
+------------------------------------------------------------------------
+
+
+DATE: 29/01/2025
+------------------------------------------------------------------------
+Work Done:
+- Implemented the Task Sheets initialization system
+  (initializeTaskSheets function).
+- Created the getSheet() function for dynamically creating sheets
+  with custom headers.
+- Built the getTaskSheetName() helper for managing task sheet naming.
+- Added support for different task types and archiving.
+------------------------------------------------------------------------
+
+
+DATE: 30/01/2025
+------------------------------------------------------------------------
+Work Done:
+- Built the Validation module for data validation in Google Sheets.
+- Implemented the /api/manager/get-sheet-schema endpoint to fetch
+  column schemas.
+- Created schema validation logic for different field types:
+  phone_number, pincode, email, number, text, options, date.
+- Added required field checking functionality.
+------------------------------------------------------------------------
+
+
+DATE: 31/01/2025
+------------------------------------------------------------------------
+Work Done:
+- Implemented the /api/manager/save-sheet-schema endpoint.
+- Built the schema caching system for faster validation lookups.
+- Created the validate-and-format-sheet endpoint for automated
+  data validation.
+- Added error cell tracking and reporting in validation results.
+------------------------------------------------------------------------
+
+
+DATE: 03/02/2025
+------------------------------------------------------------------------
+Work Done:
+- Implemented the /api/manager/list-sheets endpoint for listing
+  all sheet tabs in a spreadsheet.
+- Built the sheet discovery system for validation.
+- Added smart sheet name matching logic for finding correct tabs.
+- Integrated validation system with the Manager Panel UI.
+------------------------------------------------------------------------
+
+
+DATE: 04/02/2025
+------------------------------------------------------------------------
+Work Done:
+- Started work on the UserPanel.jsx component.
+- Implemented the task viewing functionality for regular users.
+- Built the data entry interface for users to fill assigned tasks.
+- Created the task status tracking and progress display.
+------------------------------------------------------------------------
+
+
+DATE: 05/02/2025
+------------------------------------------------------------------------
+Work Done:
+- Implemented the QR Code generation feature using the qrcode library.
+- Created endpoints for generating QR codes for various operations.
+- Integrated UUID generation for unique identifiers using the uuid
+  library.
+- Added QR code scanning support for quick task access.
+------------------------------------------------------------------------
+
+
+DATE: 06/02/2025
+------------------------------------------------------------------------
+Work Done:
+- Implemented Two-Factor Authentication (2FA) using OTP.
+- Integrated the otplib library for generating and verifying OTPs.
+- Added authentication security layer for sensitive operations.
+- Built the OTP verification UI components.
+------------------------------------------------------------------------
+
+
+DATE: 07/02/2025
+------------------------------------------------------------------------
+Work Done:
+- Built the Task Archive system for completed tasks.
+- Implemented archive/unarchive functionality with separate sheets.
+- Created the archive data management endpoints.
+- Added filtering and sorting for archived vs active tasks.
+------------------------------------------------------------------------
+
+
+DATE: 10/02/2025
+------------------------------------------------------------------------
+Work Done:
+- Implemented the Inventory Management module.
+- Built batch tracking system for inventory items.
+- Created API endpoints for adding new inventory batches with details
+  like quantity, prices, dates, and status.
+- Designed the Inventory UI section in the Manager Panel.
+------------------------------------------------------------------------
+
+
+DATE: 11/02/2025
+------------------------------------------------------------------------
+Work Done:
+- Added the Manage functionality for inventory batches.
+- Implemented PUT endpoint for updating batch details (quantity,
+  prices, dates, status).
+- Implemented DELETE endpoint for removing inventory batches.
+- Built a slide-over panel UI for managing individual batches.
+------------------------------------------------------------------------
+
+
+DATE: 12/02/2025
+------------------------------------------------------------------------
+Work Done:
+- Added confirmation dialogs for destructive operations (batch delete).
+- Implemented inline editing for batch fields in the manage panel.
+- Added real-time validation for inventory data inputs.
+- Polished the overall Inventory Management user interface.
+------------------------------------------------------------------------
+
+
+DATE: 13/02/2025
+------------------------------------------------------------------------
+Work Done:
+- Integrated all modules and performed end-to-end testing.
+- Fixed API error handling across all endpoints.
+- Tested role-based access control for all three roles
+  (Admin, Manager, User).
+- Verified Google Sheets sync operations are working correctly.
+------------------------------------------------------------------------
+
+
+DATE: 14/02/2025
+------------------------------------------------------------------------
+Work Done:
+- Fixed edge cases in the validation engine.
+- Improved error messages and user feedback across the application.
+- Added loading states and transition animations in the frontend.
+- Performed cross-browser testing and responsive design fixes.
+------------------------------------------------------------------------
+
+
+DATE: 17/02/2025
+------------------------------------------------------------------------
+Work Done:
+- Refined the project documentation and prepared module descriptions.
+- Updated workflow diagrams for Admin, Manager, and User roles.
+- Created the project report with system architecture details.
+- Documented API endpoints and their request/response formats.
+------------------------------------------------------------------------
+
+
+DATE: 18/02/2025
+------------------------------------------------------------------------
+Work Done:
+- Initialized Git repository for version control.
+- Created the .gitignore file to exclude node_modules and credentials.
+- Pushed the complete project code to GitHub.
+- Organized the repository structure and added README documentation.
+------------------------------------------------------------------------
+
+
+DATE: 19/02/2025
+------------------------------------------------------------------------
+Work Done:
+- Final review and bug fixes on the Inventory Management module.
+- Conducted user acceptance testing with all three roles.
+- Verified all CRUD operations across Stations, Users, Tasks,
+  Groups, and Inventory.
+- Prepared the project for final demonstration and submission.
+------------------------------------------------------------------------
+
+
+========================================================================
+                         END OF PROGRESS REPORT
+========================================================================
